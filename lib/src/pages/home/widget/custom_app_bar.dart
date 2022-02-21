@@ -1,5 +1,4 @@
 import 'package:dark_mode_app/src/settings/settings_controller.dart';
-import 'package:dark_mode_app/src/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -10,7 +9,7 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20 , vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20 , vertical: 20),
       child: Row(
         children: [
           Expanded(
@@ -27,7 +26,7 @@ class CustomAppBar extends StatelessWidget {
                 ),
                 prefixIcon:  IconButton(
                   onPressed: (){},
-                  icon: Icon(Icons.search_outlined),
+                  icon: const Icon(Icons.search_outlined),
                   color: Theme.of(context).colorScheme.onSurface,
                   iconSize: 30,
                 ),

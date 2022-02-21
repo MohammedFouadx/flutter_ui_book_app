@@ -20,15 +20,15 @@ class HomeScreen extends StatelessWidget {
           TrendingBook(),
         ],
       ),
-      bottomNavigationBar: _BuildBottomNavigation(context),
+      bottomNavigationBar: _buildBottomNavigation(context),
     );
   }
-  Widget _BuildBottomNavigation(context) {
+  Widget _buildBottomNavigation(context) {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
       showSelectedLabels: false,
         showUnselectedLabels: false,
-        selectedItemColor: Color(0xff6741ff),
+        selectedItemColor: const Color(0xff6741ff),
         items:  const [
           BottomNavigationBarItem(
             label: 'Home',

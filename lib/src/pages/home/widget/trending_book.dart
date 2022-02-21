@@ -23,7 +23,7 @@ class TrendingBook extends StatelessWidget {
           shrinkWrap: true,
           scrollDirection: Axis.vertical,
           itemCount: trendingBookList.length,
-          separatorBuilder: (_ , index) => SizedBox(height: 10,),
+          separatorBuilder: (_ , index) => const SizedBox(height: 10,),
           itemBuilder: (context , index) {
             return InkWell(
               onTap: (){
@@ -39,7 +39,7 @@ class TrendingBook extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(trendingBookList[index].imgUrl) ,
                     ),
-                    SizedBox(width: 20,),
+                    const SizedBox(width: 20,),
                     Expanded(
                         child: Column(
                           children: [
@@ -49,7 +49,7 @@ class TrendingBook extends StatelessWidget {
                                 Expanded(
                                   child: Text(
                                    trendingBookList[index].name,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       overflow: TextOverflow.ellipsis,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
@@ -64,13 +64,13 @@ class TrendingBook extends StatelessWidget {
                               alignment: Alignment.centerLeft,
                               child: Text(
                                 trendingBookList[index].author ,
-                                style: TextStyle(color: Colors.grey),)),
+                                style: const TextStyle(color: Colors.grey),)),
 
-                            SizedBox(height: 15,),
+                            const SizedBox(height: 15,),
                             Text(
                               trendingBookList[index].desc,
                               overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.grey,
                               ),
                             ),
@@ -117,7 +117,7 @@ class TrendingBook extends StatelessWidget {
         const SizedBox(width: 5,),
         Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.bold
           ),

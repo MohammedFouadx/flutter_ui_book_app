@@ -2,12 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:dark_mode_app/src/models/book.dart';
 import 'package:get/get.dart';
+import 'dart:core';
 
 
 
 class DetailScreen extends StatelessWidget {
   final Book  book;
-   DetailScreen(this.book,{Key? key}) : super(key: key);
+   const DetailScreen(this.book,{Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -89,7 +90,7 @@ class DetailScreen extends StatelessWidget {
                 const SizedBox(height: 15,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: book.type!.map((e) => Padding(
+                  children: book.type.map((e) => Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 5),
                     child: Chip(
                       backgroundColor: Theme.of(context).colorScheme.secondary,
@@ -124,7 +125,7 @@ class DetailScreen extends StatelessWidget {
                       _buildButton(
                           Icons.menu_book,
                           'Read Now',
-                          Color(0xff6741ff),
+                          const Color(0xff6741ff),
                               (){}
                       ),
                     ],
@@ -161,7 +162,7 @@ class DetailScreen extends StatelessWidget {
             const SizedBox(width: 5,),
             Text(
               text,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 12
               ),
@@ -182,7 +183,7 @@ class DetailScreen extends StatelessWidget {
         const SizedBox(width: 5,),
         Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.bold
           ),
